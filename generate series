@@ -1,0 +1,28 @@
+import pandas as pd
+#series generated from a list
+a=[1,7,2]
+
+myvar=pd.Series(a)
+print(a)
+print(myvar)
+print('---------------')
+#labels
+print(myvar[0])
+print('----------------')
+#assigning separate labels to valiues in the
+myvar2=pd.Series(a,index=["x","y","z"])
+print(myvar2)
+print(myvar2["y"])
+print('---------------')
+#series  generated from dictionary
+calories={"day1":420,"day2":380,"day3":390}
+
+myvar=pd.Series(calories)
+print(myvar)
+print('---------------')
+myvar=pd.Series(calories,index=["day1","day2"])
+print(myvar)
+print('---------------')
+#series generated from scaler value
+series=pd.Series(5,index=[0,1,2,3])
+print(series)
