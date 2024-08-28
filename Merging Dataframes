@@ -18,3 +18,41 @@ print(df,"\n\n",df1)
 #using .merge() function
 res=pd.merge(df,df1,on='key')
 res
+
+**********merging************
+data1={
+    'Name1':['ana','joe'],
+    'Age1':[22,26],
+    'Email1':['ana@gmail.com','joe@gmail.com'],
+    'city':['new york','losangles']
+}
+data2={
+    'Name2':['mia','maya'],
+    'Age2':[25,28],
+    'Email2':['mia@gmail.com','maya@gmail.com'],
+    'city':['new york','washington']
+}
+df=pd.DataFrame(data1)
+df1=pd.DataFrame(data2)
+print(df,"\n\n",df1)
+res=pd.merge(df,df1,on='city')
+res
+
+*********merging*********
+data1={
+    'Name':['ana','joe'],
+    'Age1':[22,26],
+    'Email1':['ana@gmail.com','joe@gmail.com'],
+    'city':['new york','losangles']
+}
+data2={
+    'Name':['mia','maya'],
+    'Age2':[25,28],
+    'Email2':['mia@gmail.com','maya@gmail.com'],
+    'city':['new york','washington']
+}
+df=pd.DataFrame(data1)
+df1=pd.DataFrame(data2)
+print(df,"\n\n",df1)
+res=pd.merge(df,df1,on='city',how='left',indicator=True,suffixes=('_left','_right'))
+res
