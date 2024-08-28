@@ -1,0 +1,24 @@
+#integer Series
+int_series=pd.Series([1,2,3,4])
+print(int_series)
+print('-------------')
+#float Series
+float_series=pd.Series([1.1,2.2,3.3,4.4])
+print(float_series)
+print('------------')
+#String Series
+string_series=pd.Series(['a','b','c','d'])
+print(string_series)
+print('------------')
+#label-based indexing
+data={'a':10,'b':20,'c':30}
+series=pd.Series(data)
+print(series['a'])
+print(series[['a','c']])
+print('------------')
+#boolean indexing
+data=[10,20,30,40,50]
+series=pd.Series(data)
+#access elements greater than 25
+print(series[series>25])
+print('------------')
