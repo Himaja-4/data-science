@@ -1,0 +1,20 @@
+******Merging a dataframes********
+
+#import pandas module
+import pandas as pd
+#define a dictionary containing employee data
+data1={'key':['k0','k1','k2','k3'],
+       'Name':['Jai','Princi','Gourav','Anuj'],
+       'Age':[27,24,22,32]}
+#define a dictionary containg employee data
+data2={'key':['k0','k1','k2','k3'],
+       'Address':['Nagpur','Kanpur','Allahabad','Kannuaj'],
+       'Qualification':['B-tech','B.A','Bcom','B-hons']}
+#convert the dictionary into dataframe
+df=pd.DataFrame(data1)
+#convert the dictionary into dataframe
+df1=pd.DataFrame(data2)
+print(df,"\n\n",df1)
+#using .merge() function
+res=pd.merge(df,df1,on='key')
+res
