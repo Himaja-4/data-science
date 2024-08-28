@@ -1,0 +1,33 @@
+#CREATING A DATA FRAME
+
+data={
+    'Name':['Alice','Bob','Charlie'],
+    'Age':[25,30,35],
+    'City':['New York','Los Angeles','Chicago']
+}
+df=pd.DataFrame(data)
+print(df)
+print('-----------------------------')
+#selecting columns')
+print(df.Name)
+print(df['Name'])
+print(df[['Name','City']])
+print('----------------------------')
+
+df=pd.DataFrame(data)
+#select a single row by label
+print(df.loc[0])
+print('-----------------------------')
+
+print(df.iloc[0])
+#select multiple rows
+print(df.iloc[0:2])
+print('-----------------------------')
+
+#Conditional selection
+
+df=pd.DataFrame(data)
+#select rows where age is greater than 25
+print(df[df['Age']>25])
+print('-------------------------')
+print(df.loc[(df.Name=='Bob')&(df.City=='Los Angeles')])
